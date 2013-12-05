@@ -236,7 +236,8 @@ void ModBusParseRequest(char *pInBuf, char *pOutBuf, unsigned int *pLen)
 	{
 		if (pModBus->cCode == m_sMBReqProc[i].cCode)
 		{
-			m_sMBReqProc[i].pCodeCb((unsigned int)pInBuf, (unsigned int)pOutBuf, (unsigned int)pLen);
+			m_sMBReqProc[i].pCodeCb((unsigned int)pInBuf, (unsigned int)pOutBuf,
+			  (unsigned int)pLen);
 			return;
 		}
 	}
